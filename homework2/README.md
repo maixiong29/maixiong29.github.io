@@ -1,0 +1,1 @@
+In this homewrok, I created a main "About Me" page, a portfolio page, and a contact page using bootstrap, hmtl, and css.  All the pages are responsive to different screen sizes (980, 768, and 640).
