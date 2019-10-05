@@ -9,9 +9,7 @@ var password = "";
 
 generate.addEventListener("click", function () {
    var userLength = parseInt(prompt("How many characters would you like your password to contain?"));
-   // for (i = 0; i < keyList.length; i++) {
-   //     text += cars[i] + "<br>";
-   //   }
+
    if (userLength < 8 || userLength > 128){
      alert ("Enter between 8-128 characters")
    }
