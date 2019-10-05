@@ -13,4 +13,4 @@ A random password gets generated and is displayed in the text box and the user a
 Here are screenshots of what this looks like and the GitHub Pages URL:
 ![Homework 3 screenshot](./assets/hw3screenshot.png)
 ![Homework 3 screenshot 2](./assets/hw3screenshot2.png)
-![GitHub Pages URL](maixiong29.github.io/homework3/index.html)
+![GitHub Pages URL](https://maixiong29.github.io/homework3/index.html)
