@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+   </head>
+  <body>
+    <header>
+        <h2>Highscore</h2> 
+
+      
+        <div class="card-body-center">
+                <h3 id="title" class="card-title text-center">Avengers Quiz Challenge</h3>
+                <p id="descrip" class="card-text text-center">Try to answer the following questions about the Avengers within the time limit.  Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+                <div id="question-container" class="hide">
+                    <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid">
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                        <button class="btn"></button>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="start-btn" class="start-btn btn">Start Quiz</button>
+                    <button id="next-btn" class="next-btn btn hide">Next</button>
+                    <p id="correct"></p>
+                    <p id="wrong"></p>
+                </div>
+                    
+                </div>
+
+
+                
+              
+  </body>
+</html>
