@@ -13,8 +13,7 @@ $(document).ready(function() {
         $("h3").hide();
         $("p").hide();
         shuffledQuestions = questions.sort(() => Math.random() - .5);
-        currentQuestionIndex = 0;
-        
+
     };
 
     var questions = [

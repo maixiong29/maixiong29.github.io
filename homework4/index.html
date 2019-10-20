@@ -11,13 +11,16 @@
     <script src="script.js"></script>
    </head>
   <body>
-    <header>
-        <h2>Highscore</h2> 
+         <header>
+            <button class="btn btn-warning btn-xs highscore-button">
+                <span class="fa fa-music"></span>Highscore</button>
+            <button class="btn btn-dark btn-xs timer-button">
+                <span class="fa fa-pause"></span>Timer</button>
 
-      
-        <div class="card-body-center">
-                <h3 id="title" class="card-title text-center">Avengers Quiz Challenge</h3>
-                <p id="descrip" class="card-text text-center">Try to answer the following questions about the Avengers within the time limit.  Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+        <div class="container">
+        <div class="jumbotron">
+                <h3 id="title" class="text-center">Avengers Quiz Challenge</h3>
+                <p id="descrip" class="text-center">Try to answer the following questions about the Avengers within the time limit.  Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
                 <div id="question-container" class="hide">
                     <div id="question"></div>
                 <div id="answer-buttons" class="btn-grid">
@@ -29,7 +32,6 @@
                 </div>
                 <div class="controls">
                     <button id="start-btn" class="start-btn btn">Start Quiz</button>
-                    <button id="next-btn" class="next-btn btn hide">Next</button>
                     <p id="correct"></p>
                     <p id="wrong"></p>
                 </div>

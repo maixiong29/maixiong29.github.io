@@ -2,17 +2,14 @@ html, body{
     background: url(shattered/shattered.png);
 }
 
-
-h2 {
-    position: relative;
-    text-align: left;
+highscore-button {
+    align-items: left;
     color: blue;
 }
 
-.card-body-center{
-    position: relative;
-    padding-top: 200px;
-
+timer-button {
+    align-items: right;
+    color: green;
 }
 
 #start-btn {
