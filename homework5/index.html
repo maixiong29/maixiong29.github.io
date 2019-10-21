@@ -34,7 +34,7 @@
               <span class="input-group-text">9am</span>
                     <input type="text" class="row" style="width:800px">
                       <button class="saveBtn" type="button">Save</button>
-                      <div class="input-group">
+         <div class="input-group">
                       <span class="input-group-text">10am</span>
                       <input type="text" class="row" style="width:800px">
                         <button class="saveBtn" type="button">Save</button>
@@ -96,6 +96,24 @@
     var moment = moment().format("LLLL");
 
     $("#currentDay").text(moment);
+
+    var addition = document.querySelector(".row");
+    var saveEvent = document.querySelector(".saveBtn");
+
+    saveEvent.addEventListener("click", function(event){
+      event.preventDefault();
+      
+
+      
+   
+    });
+  function init(){
+
+      var lastEvent = JSON.parse(localStorage.getItem("addition"));
+localStorage.setItem("addition", JSON.stringify(addition));
+  }
+  
+
     </script>
   </body>
 </html>
