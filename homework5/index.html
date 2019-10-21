@@ -28,25 +28,74 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="description">
+    <div class="jumbotron">
         
-                <label>9am<textarea class="row" name="" style="width:1000px"></textarea><button class="saveBtn"></button></label>
-                <label>10am<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>11am<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>12pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>1pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>2pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>3pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>4pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
-                <label>5pm<input type="text" class="row" name="" style="width:1000px"><button class="saveBtn"></button></label>
+        <div class="input-group" class="time-block">
+              <span class="input-group-text">9am</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                      <div class="input-group">
+                      <span class="input-group-text">10am</span>
+                      <input type="text" class="row" style="width:800px">
+                        <button class="saveBtn" type="button">Save</button>
+                        </div>
+        <div class="input-group"class="time-block">
+                        
+                        <span class="input-group-text">11am</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">12pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">1pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">2pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">3pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">4pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
+
+        <div class="input-group">
+
+                      <span class="input-group-text">5pm</span>
+                    <input type="text" class="row" style="width:800px">
+                      <button class="saveBtn" type="button">Save</button>
+                    </div>
     </div>  
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript">
-    var moment = require("moment");
+    
+    var moment = moment().format("LLLL");
 
-    moment.textContent = currentDay;
+    $("#currentDay").text(moment);
     </script>
   </body>
 </html>
