@@ -97,14 +97,15 @@ h2{
 
 
 .card{
-  position: relative;
-  top: 30px;
   padding: 20px;
-  margin: 0 auto;
   border: 1px solid #dddddd;
   background-color: #ffffff;
   color: #777777;
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  flex: 1 0 auto;
+  width: 960px;
+  margin-top: 25px;
+ 
 }
 
 #image1{
@@ -164,12 +165,12 @@ h4 {
 
 
 #ffdb{
-  background: url("../images/abc.jpg") no-repeat;
+  background: url("../images/ffdbimage.png") no-repeat;
   background-size: 100% 100%;
   cursor:pointer;
   border:none;
   width:40%;
-  height:150px;
+  height:250px;
   margin: 10px;
   font-size: 20px;
   float: left;
@@ -178,12 +179,12 @@ h4 {
   
 
 #pg{
-  background: url("../images/go.jpg") no-repeat;
+  background: url("../images/pgimage.png") no-repeat;
   background-size: 100% 100%;
   cursor:pointer;
   border:none;
   width:40%;
-  height:150px;
+  height:250px;
   margin: 10px;
   font-size: 20px;
   color: white;
@@ -196,7 +197,7 @@ h4 {
   cursor:pointer;
   border:none;
   width:40%;
-  height:150px;
+  height:250px;
   margin: 10px;
   font-size: 20px;
   color: white;
