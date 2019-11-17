@@ -63,19 +63,8 @@ function promptUser() {
 
     const following = res.data.following;
     console.log(following);
-
-    const stars = res.data.map((stargazer) => {
-      return stargazer.stargazers_count;
     });
-    console.log(stars);
-
-    const count = stars;
-    for (let i = 0; i < count.length; i++) {
-
-    }
-    const add = (a, b) =>
-    a + b
-    const sum = count.reduce(add);
+   
   });
 });
     
