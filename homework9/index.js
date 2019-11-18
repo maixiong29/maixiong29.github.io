@@ -9,7 +9,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
   return inquirer
-.prompt(
+  .prompt([
     {
       type: "input",
       name: "name",
@@ -35,41 +35,16 @@ function promptUser() {
           "Green",
           "Pink",
         ],
-      },
-  )
-  
+      }
+  ])
+
 .then(function({ username }) {
-  const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+  const queryUrl = `https://api.github.com/users/${username}`;
 
 
   axios.get(queryUrl).then(function(res) {
-    const image = res.data.avatar_url;
-    console.log(image);
-
-    const location = res.data.location;
-    console.log(location);
-
-    const github = res.data.html_url;
-    console.log(github);
-
-    const blog = res.data.blog;
-    console.log(blog);
-
-    const publicRepos = res.data.public_repos;
-    console.log(publicRepos);
-
-    const followers = res.data.followers;
-    console.log(followers);
-
-    const following = res.data.following;
-    console.log(following);
-    });
-   
-  });
-});
-    
-
-function generateHTML(answers) {
+ 
+    function generateHTML(answers) {
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -77,40 +52,51 @@ function generateHTML(answers) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
+  <title>GitHub Profile PDF Generator</title>
 </head>
 <body>
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid;" style="background-color: ${color}>
   <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name} !</h1>
+    <h1 class="display-4">Hi! My name is ${name} !</h1>
+    <div class="col-4"><img class="center-block" src="${answers.data.avatar_url}"></div>
     <br>
     <ul class="list-group">
-      <li class="list-group-item">${answers.location}</li>
-      <li class="list-group-item">GitHub<alt href=""></li>
-      <li class="list-group-item">Blog<alt href=""></li>
+      <li class="list-group-item">${location}</li>
+      <li class="list-group-item">GitHub<a href="https://github.com/${username}"></li>
+      <li class="list-group-item">Blog<a href="${answers.data.blog}"></li>
     </ul>
     <br>
-    <div class="card-columns">
+    <h2 style="text-align:center;">${answers.data.bio}</h2>
+    <br>
+    <div class="card-columns" style="background-color: ${color}>
     <h3><strong>Public Repositories</strong></h3>
-    <div id="publicRepos"></div>
+    <div id="publicRepos">${answers.data.public_repos}</div>
 
+    <div class="card-columns" style="background-color: ${color}>
     <h3><strong>Followers</strong></h3>
-    <div id="followers"></div>
+    <div id="followers">${answers.data.followers}</div>
     
+    <div class="card-columns" style="background-color: ${color}>
     <h3><strong>GitHub Stars</strong></h3>
-    <div id="githubStars"></div>
+    <div id="githubStars">${answers.data.public_gists}</div>
 
+    <div class="card-columns" style="background-color: ${color}>
     <h3><strong>Following</strong></h3>
-    <div id="following"></div>
+    <div id="following">${answers.data.following}</div>
     </div>
   </div>
 </div>
 </body>
 </html>`;
+    
+    
+}});
+});
 };
 
+
 async function init() {
-  console.log("hi");
+  console.log("Hi");
   try {
     const answers = await promptUser();
 
@@ -121,7 +107,7 @@ async function init() {
     var readHtml = fs.readFileSync('index.html', 'utf8');
     var options = { format: 'Letter' };
      
-    pdf.create(readHtml, options).toFile('test.pdf', function(err, res) {
+    await pdf.create(readHtml, options).toFile('test.pdf', function(err, res) {
       if (err) return console.log(err);
       console.log(res); 
     });
@@ -130,7 +116,7 @@ async function init() {
   } catch (err) {
     console.log(err);
   };
-}
 };
+
 
 init();

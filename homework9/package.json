@@ -14,5 +14,13 @@
     "pdf"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "fs": "0.0.1-security",
+    "html-pdf": "^2.2.0",
+    "inquirer": "^7.0.0",
+    "until": "^0.1.1",
+    "util": "^0.12.1"
+  }
 }
