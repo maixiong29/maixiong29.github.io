@@ -14,8 +14,8 @@ The PDF will have information such as:
 How the generator works is the User will be asked 3 sets of questions for their name, GitHub username, and their favorite color from the list.  With the information input into Node.js, the users' information will get pulled from GitHub API and then turned into a PDF index file.
 
 ******
-https://giphy.com/gifs/MdB0ytbTshXn1poG2p/html5
+![Alt Text](https://media.giphy.com/media/Ph6IKreqBkyM2sWxQ2/giphy.gif)
 
 ******
-https://giphy.com/gifs/Ph6IKreqBkyM2sWxQ2/html5
+![Alt Text](https://media.giphy.com/media/Ph6IKreqBkyM2sWxQ2/giphy.gif)
 
