@@ -5,11 +5,8 @@ const axios = require("axios");
 const pdf = require('html-pdf');
 
 
-const writeFileAsync = util.promisify(fs.writeFile);
-
 function promptUser() {
-  return inquirer
-  .prompt([
+  return inquirer.prompt([
     {
       type: "input",
       name: "name",
@@ -19,11 +16,6 @@ function promptUser() {
       type: "input",
       name: "username",
       message: "Enter your GitHub Username"
-    },
-    {
-      type: "input",
-      name: "location",
-      message: "Where are you from?"
     },
     {
         type: "list",
@@ -38,59 +30,81 @@ function promptUser() {
       }
   ])
 
-.then(function({ username }) {
+.then(function({ name, username, color }) {
   const queryUrl = `https://api.github.com/users/${username}`;
 
 
-  axios.get(queryUrl).then(function(res) {
- 
-    function generateHTML(answers) {
-  return `
-<!DOCTYPE html>
+  axios.get(queryUrl).then(function(response) {
+  fs.writeFile("./index.html",
+`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <title>GitHub Profile PDF Generator</title>
 </head>
-<body>
-  <div class="jumbotron jumbotron-fluid;" style="background-color: ${color}>
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${name} !</h1>
-    <div class="col-4"><img class="center-block" src="${answers.data.avatar_url}"></div>
-    <br>
-    <ul class="list-group">
-      <li class="list-group-item">${location}</li>
-      <li class="list-group-item">GitHub<a href="https://github.com/${username}"></li>
-      <li class="list-group-item">Blog<a href="${answers.data.blog}"></li>
-    </ul>
-    <br>
-    <h2 style="text-align:center;">${answers.data.bio}</h2>
-    <br>
-    <div class="card-columns" style="background-color: ${color}>
-    <h3><strong>Public Repositories</strong></h3>
-    <div id="publicRepos">${answers.data.public_repos}</div>
+<body style="background-color:purple>
 
-    <div class="card-columns" style="background-color: ${color}>
-    <h3><strong>Followers</strong></h3>
-    <div id="followers">${answers.data.followers}</div>
+<div class="container">
+
+<div class="row">
+  <div class="col-12" style="text-align: center; background-color: ${color};"><h1>Hi! My name is ${name} !</h1></div>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid;" style="margin: 0 auto; background-color: white;">
+  <div class="row">
+  <div class="col-4"></div>
+    <div class="col-4"><img class="center-block" src="${response.data.avatar_url}"></div>
+    <div class="col-4"></div>
+  </div>
+
+<br />
+
+  <div class="row">
+  <div class="col-4" style="text-align: center; font-size: 24px;"><i class="fas fa-location-arrow"></i>${response.data.location}</div>
+  <div class="col-4"><h4><i class="fab fa-github-square"></i><a href="https://github.com/${username}">GitHub</a></h4></div>
+  <div class="col-4"><h4><i class="fab fa-linkedin"></i><a href="${response.data.blog}">LinkedIn</a></h4></div>
+  </div>
+
+<br />
+
+  <h2 style="text-align:center;">${response.data.bio}</h2>
     
-    <div class="card-columns" style="background-color: ${color}>
-    <h3><strong>GitHub Stars</strong></h3>
-    <div id="githubStars">${answers.data.public_gists}</div>
+<br />
 
-    <div class="card-columns" style="background-color: ${color}>
-    <h3><strong>Following</strong></h3>
-    <div id="following">${answers.data.following}</div>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-4 card" style="background-color: ${color}; font-size: 26px; text-align: center; padding: 15px;">Public Repositories:  ${response.data.public_repos}</div>
+    <div class="col-2"></div>
+    <div class="col-4 card" style="background-color: ${color}; font-size: 26px; text-align: center; padding: 15px;">Followers:  ${response.data.followers}</div>
+    <div class="col-1"></div>
     </div>
+  
+<br />
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-4 card" style="background-color: ${color}; font-size: 26px; text-align: center; padding: 15px;">GitHub Stars: ${response.data.public_gists}</div>
+    <div class="col-2"></div>
+    <div class="col-4 card" style="background-color: ${color}; font-size: 26px; text-align: center; padding: 15px;">Following:  ${response.data.following}</div>
+    <div class="col-1"></div>
+    </div>
+
   </div>
 </div>
 </body>
-</html>`;
+</html>`,
+(err) => {
+  if (err)
+      throw err;
+
+      console.log("Successfully created an HTML file!");
     
-    
-}});
+}
+  );
+  });
 });
 };
 
@@ -100,22 +114,21 @@ async function init() {
   try {
     const answers = await promptUser();
 
-    const html = generateHTML(answers);
-
-    await writeFileAsync("index.html", html);
-
-    var readHtml = fs.readFileSync('index.html', 'utf8');
-    var options = { format: 'Letter' };
+    var options = { 
+    format: 'Letter',
+    height: "17500px",
+    width: "1750px",  
+  };
      
-    await pdf.create(readHtml, options).toFile('test.pdf', function(err, res) {
+    await pdf.create(fs.readFileSync('./index.html', 'utf8'), options).toFile('./ghprofile.pdf', function(err, res) {
       if (err) return console.log(err);
       console.log(res); 
     });
 
-    console.log("Successfully wrote to index.html");
-  } catch (err) {
-    console.log(err);
-  };
+    console.log("Successfully wrote to index.html!");
+  } 
+  catch (err) {
+    console.log(err);}
 };
 
 
