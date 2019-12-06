@@ -31,7 +31,7 @@ app.get("/api/notes", function (req, res) {
 
 app.post("/api/notes", function (req, res) {
     var newNote = req.body;
-    console.log("Added New Note");
+    console.log("Added New Note!");
     notes.push(newNote);
     res.json(newNote);
     assignID();
@@ -42,7 +42,6 @@ app.post("/api/notes", function (req, res) {
 });
 
 app.delete("/api/notes/:id", function(req, res) {
-    console.log(req);
     const targetNote = parseInt(req.body.id);
     notes.splice(targetNote, 1);
     for(let i = 0; i < notes.length; i++){
@@ -53,7 +52,7 @@ app.delete("/api/notes/:id", function(req, res) {
       if(err) {
           return console.log(err);
       }
-      console.log("Note deleted!");
+      console.log("Note Deleted!");
     });
     res.sendFile(path.join(__dirname, "public/notes.html"));
   });
