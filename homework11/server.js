@@ -31,7 +31,7 @@ app.get("/api/notes", function (req, res) {
 
 app.post("/api/notes", function (req, res) {
     var newNote = req.body;
-    console.log(newNote);
+    console.log("Added New Note");
     notes.push(newNote);
     res.json(newNote);
     assignID();
@@ -53,7 +53,7 @@ app.delete("/api/notes/:id", function(req, res) {
       if(err) {
           return console.log(err);
       }
-      console.log("The file was deleted!");
+      console.log("Note deleted!");
     });
     res.sendFile(path.join(__dirname, "public/notes.html"));
   });
