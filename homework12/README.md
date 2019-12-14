@@ -17,14 +17,13 @@ Users can search for employees by their departments or roles.  This allows a use
 
 *****
 Add departments, roles, employees
-![Alt Text](https://drive.google.com/file/d/1xHxrrWySYgrJogwdWOLp6YeFkF2Fuu5w/view)
-
+https://drive.google.com/file/d/1xHxrrWySYgrJogwdWOLp6YeFkF2Fuu5w/view?usp=sharing
 *****
 View departments, roles, employees
-
+https://drive.google.com/file/d/1xHxrrWySYgrJogwdWOLp6YeFkF2Fuu5w/view
 
 
 *****
 Update employee roles
 
-
+https://drive.google.com/file/d/10jg8WQ8YcXYFlZb6HF-6KXE6OPRN1Xo9/view
