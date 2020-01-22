@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Currrent Weather</title>
+</head>
+<body>
+    <div id="searchContainer">
+        <input class="searchControl" type="text" placeholder="City Name" id="city">
+        <button class="searchControl" id="searchBtn">Search</button>
+    </div>
+    <div id="buttons-view"></div>
+
+    <div id="weather-view">
+    <div class="card text-center">
+            <div class="card-body-center">
+        <h3 class="city"></h3>
+        <p class="wind"></p>
+        <p class="temperature"></p>
+        <p class="humidity"></p>
+      </div>
+      </div>
+      <h3>5-Day Forecast:</h3>
+      <div class="card-deck">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="date"></h5>
+        <p class="fiveDayTemperature"></p>
+        <p class="fiveDayHumidity"></p>
+      </div>
+      </div>
+      <div class="card">
+            <div class="card-body">
+              <h5 class="date"></h5>
+      <p class="fiveDayTemperature"></p>
+      <p class="fiveDayHumidity"></p>
+    </div>
+    </div>
+    <div class="card">
+            <div class="card-body">
+              <h5 class="date"></h5>
+      <p class="fiveDayTemperature"></p>
+      <p class="fiveDayHumidity"></p>
+    </div>
+    </div>
+    <div class="card">
+            <div class="card-body">
+              <h5 class="date"></h5>
+      <p class="fiveDayTemperature"></p>
+      <p class="fiveDayHumidity"></p>
+    </div>
+    </div>
+    <div class="card">
+            <div class="card-body">
+              <h5 class="date"></h5>
+      <p class="fiveDayTemperature"></p>
+      <p class="fiveDayHumidity"></p>
+    </div>
+    </div>
+      </div>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+
+    <script type="text/javascript">
+var cities = [];
+    
+$(document).ready(function(){
+    $("#searchBtn").click(function(){
+   var cityName = $('#city').val();
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&units=imperial&appid=4608e98e3a4522bd81b0ed6ae7a794d9"     
+    
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    }).then(function(response) {
+
+      console.log(response);
+      $(".city").text(response.name);
+      $(".weather-icon").text(response.weather.icon);
+     // $(".date").text(response.base);
+      $(".temperature").text("Temperature: " + response.main.temp + " F");
+      $(".humidity").text("Humidity: " + response.main.humidity);
+      $(".wind").text(" Wind Speed: " + response.wind.speed + " MPH");
+      $("#searchBtn").on("click", function(event) {
+event.preventDefault();
+
+cities.push(city);
+
+renderButtons();
+});
+
+$(document).on("click", ".city-btn", response);
+renderButtons();
+ 
+   });
+    var fiveDayURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + "&units=imperial&appid=4608e98e3a4522bd81b0ed6ae7a794d9&cnt=20"
+    $.ajax({
+        url: fiveDayURL,
+        method: "GET",
+    }).then(function(response) {
+        console.log(response);
+    $(".fiveDayTemperature").text("Temperature: " + response.list.main.temp + " F");
+      $(".fiveDayHumidity").text("Humidity: " + response.list.main.humidity);
+     $(".date").text(response.list.dt_txt); 
+    });
+    
+    function renderButtons() {
+$("#buttons-view").empty();
+
+for (var i = 0; i < cities.length; i++) {
+
+  var a = $("<button>");
+ 
+  a.addClass("city-btn");
+  a.attr("data-name", cityName[i]);
+  a.text(cityName[i]);
+  $("#buttons-view").append(a);
+
+  localStorage.setItem("cityName", JSON.stringify(cityName));
+
+var pastCities = JSON.parse(localStorage.getItem("cityName"));  
+ 
+
+
+};
+};
+});
+    });
+    </script>
+</body>
+</html>

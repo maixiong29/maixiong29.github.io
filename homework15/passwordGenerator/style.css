@@ -1,0 +1,51 @@
+body {
+    background-color: #f9fbfd;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;   
+}
+
+.card {
+    padding: 20px;
+    background-color: white;
+    border-style: groove;
+}
+
+textarea {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: gray;
+}
+
+#generate {
+    font-size: 24px;
+    float: left;
+    padding: 14px 40px;
+    font-family: calbibri;
+    background-color: #af0808;
+    color: white;
+    margin: 10px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+#copy {
+    font-size: 24px;
+    float: right;
+    color: white;
+    background-color: #c0c7cf;
+    padding: 14px 40px;
+    font-family: calbibri;
+    margin: 10px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
