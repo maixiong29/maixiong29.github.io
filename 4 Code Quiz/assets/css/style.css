@@ -1,0 +1,116 @@
+body{
+    background: url("../images/background.jpg");
+}
+
+.container {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    width: 900px;
+    border: 1px solid;
+    padding: 15px;
+    margin-top: 100px;
+}
+
+.time {
+    margin-left: 800px;    
+}
+
+.nav {
+    background-color: navy;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    padding: 15px;
+}
+
+#start {
+    background-color: royalblue;
+    color:white;
+    padding: 5px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+#quizQuestions {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 360px) {
+    .container {
+        width: 345px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .time {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 411px) {
+    .container {
+        width: 400px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .time {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 310px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .time {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 350px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .time {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+    .container {
+        width: 400px;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .time {
+        margin-left: 30px;
+    }
+}

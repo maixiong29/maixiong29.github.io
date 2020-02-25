@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Avengers Challenge</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   </head>
+  <body>
+    <header>
+        <nav class="nav">
+            <h1>Avengers Quiz Challenge</h1>
+            <div class="time"></div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+        <div class="directions">
+    
+          <div class="row">
+              <div class="col-md-12">
+                  Think you know everything about the Avengers?  Test your knowledge!
+              </div>
+          </div>
+      
+      <br />
+      
+          <div class="row">
+              <div class="col-md-12">
+                Try to answer the following questions about the Avengers within the time limit. 
+             Keep in mind that incorrect answers will penalize your scoretime by ten seconds!
+              </div>
+          </div>
+    
+      <br />
+    
+          <div id="startButton">
+            <button type="button" id="start" class="btn btn-outline-dark btn-lg btn-block">Start Quiz</button>
+          </div>
+    
+        </div> <!--Directions-->
+    
+        <div id="quizQuestions"></div>
+    
+      <br />
+    
+        <div id="quizChoices">
+          <div class="options" id="A"></div>
+          <div class="options" id="B"></div>
+          <div class="options" id="C"></div>
+          <div class="options" id="D"></div>
+        </div>
+    
+        <div id=result></div>
+    
+      </div> <!--Container-->
+     
+      <script src="assets/javascript/questions.js"></script>
+      <script src="assets/javascript/script.js"></script>
+    
+    </body>
+    
+    </html>
