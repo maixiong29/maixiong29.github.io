@@ -1,0 +1,30 @@
+[
+    {
+        "id":"0",
+        "name": "FFDB",
+        "github": "https://github.com/JacobRosenbaum/FantasyFootball",
+        "deployed": "ffdb/index.html",
+        "image": "/portfolio/image/ffdbimage.png"
+    },
+    {
+        "id":"1",
+        "name": "Password Generator",
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/homework3",
+        "deployed": "passwordGenerator/index.html",
+        "image": "/portfolio/image/pgimage.jpg"
+    },
+    {
+        "id":"2",
+        "name": "Weather",
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/homework6",
+        "deployed": "weather/index.html",
+        "image": "/portfolio/image/boardgame.jpg"
+    },
+    {
+        "id":"3",
+        "name": "Module Planner",
+        "github": "https://github.com/haylee430/module_planner",
+        "deployed": "https://moduleplanner2020.herokuapp.com/",
+        "image": "/portfolio/image/mp.png"
+    }
+]
