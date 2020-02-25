@@ -1,7 +1,8 @@
 html, body {
   height: 100%;
-  width: 100%;
   background: url(full-bloom/full-bloom.png);
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -63,11 +64,14 @@ h2{
   margin: 0 auto;
 }
 
-footer {
-  position: sticky;
+.card-footer {
+  margin-top: 50px;
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
   border-top: 10px solid #4aaaa5;
   background-color: #666666;
-  width: 100%;
+  color: #ffffff;
   height: 60px;
 }
 
