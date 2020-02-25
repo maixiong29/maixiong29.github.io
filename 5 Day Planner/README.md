@@ -1,4 +1,4 @@
-#Day Planner
+### Day Planner
 
 A day planner is used to keep one organized on a daily basis.  A person can add important events to this day planner to manage their time effectively.
 
