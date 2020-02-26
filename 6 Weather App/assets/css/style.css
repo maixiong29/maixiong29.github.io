@@ -1,0 +1,29 @@
+body {
+    background: url("../image/weather.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 19px;
+}
+
+h1 {
+    background-color: rgb(238, 236, 113);
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.jumbotron {
+    background-color: rgb(237, 238, 221);
+    border-radius: 5px;
+    border: 5px solid rgb(238, 236, 113);
+}
+
+.nav {
+    padding-bottom: 15px;
+}
+
+.cityBtns {
+    width: 100%
+}
