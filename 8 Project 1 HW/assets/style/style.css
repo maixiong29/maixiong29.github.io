@@ -1,9 +1,16 @@
-html, body {
+html {
+  height: 100%
+}
+
+body {
   background: url(../images/bkgrndimage.jpg);
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -117,14 +124,16 @@ h2{
 }
 
 
-.card-footer {
-  margin-top: 50px;
-  flex-shrink: 0;
-  width: 100%;
-  text-align: center;
-  border-top: 8px solid darkgray;
+footer {
   background-color: #666666;
-  color: #ffffff;
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  height: 40px;
+  width: 100%;
+  border-top: 8px solid #4aaaa5;
+  flex-shrink: 0;
 }
 
 h4 {
