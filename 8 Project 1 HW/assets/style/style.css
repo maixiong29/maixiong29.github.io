@@ -201,7 +201,20 @@ h4 {
 
 
 #weather{
-  background: url("../images/boardgame.jpg") no-repeat;
+  background: url("../images/weatherscreenshot.png") no-repeat;
+  background-size: 100% 100%;
+  cursor:pointer;
+  border:none;
+  width:40%;
+  height:250px;
+  margin: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+
+#burger{
+  background: url("../images/burgerapp.png") no-repeat;
   background-size: 100% 100%;
   cursor:pointer;
   border:none;

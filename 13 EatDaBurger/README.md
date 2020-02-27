@@ -15,3 +15,5 @@ This app allows the user to type in any type of burger the user would like to de
 * Service-worker
 
 You can also check out my app on heroku here:  https://hw13eatdaburgerapp.herokuapp.com/
+
+Take a look at my updated profile with this app added to it:  maixiong29.github.io/8%Project%1%HW/index.html/
