@@ -1,0 +1,30 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-image: url(../images/triangle-mosaic.png);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 38px;
+    text-decoration: underline;
+}
+
+header {
+    padding: 15px;
+    text-decoration: underline;
+}
+
+.card {
+    border-radius: 25px;
+}
+
+.list-group-item {
+    border-radius: 25px;
+}
+
+img {
+    border-radius: 25px;
+}
