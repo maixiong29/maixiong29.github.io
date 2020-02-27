@@ -14,4 +14,4 @@ This app allows the user to type in any type of burger the user would like to de
 * Handlebars
 * Service-worker
 
-You can also check out my app on heroku here:  https://git.heroku.com/hw13eatdaburgerapp.git
+You can also check out my app on heroku here:  https://hw13eatdaburgerapp.herokuapp.com/
