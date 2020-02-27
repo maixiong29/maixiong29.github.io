@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/burger_style.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <title>Eat Da Burger</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    {{!-- image and title --}}
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/assets/img/burger.png" alt="picture of a burger">
+        <h1>Eat Da Burger</h1>
+      </div>
+    </div>
+    {{!-- information about the burgers --}}
+   <div class="row">
+    <div class="col-md-6">
+   <h5>Burgers Ordered:</h5></div>
+    <div class="col-md-6">
+   <h5>Burgers Devoured:</h5></div>
+   </div>
+
+    <div class="row">
+      <div class="col-md-5" id="beforeDiv"></div>
+      <div class="col-md-2" id="buttonsDiv"></div>
+      <div class="col-md-5" id="afterDiv"></div>
+    </div>
+    
+	<div class="row">
+      <div class="col-md-5" ></div>
+      <div class="col-md-2">
+          <ol id="offlineList"></ol>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+    
+	{{!-- textbox and submit button area --}}
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <br>
+        <textarea id="burgerName" cols="50" rows="4"></textarea>
+        <br>
+        <button class="btn btn-success" id="button">Add Burger</button>
+        <br><br>
+        <p>Enter a burger you would like to eat then click on "Add Burger"</p>
+      </div>
+    </div>
+  
+  </div>
+
+  {{{ body }}}
+  <script src="/assets/javascript/burger.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>

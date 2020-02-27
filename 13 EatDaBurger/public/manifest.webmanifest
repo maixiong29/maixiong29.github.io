@@ -1,0 +1,10 @@
+{
+    "name": "burger",
+    "short_name": "burger",
+    "icons": [],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "/",
+    "display": "standalone"
+  }
+  © 2020 GitHub, Inc.
