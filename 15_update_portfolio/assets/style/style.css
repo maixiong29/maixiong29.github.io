@@ -1,9 +1,11 @@
 html, body {
-  background: url(../images/bkgrndimage.jpg);
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;  
+}
+
+body {
+  background: url(../images/bkgrndimage.jpg);
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -12,6 +14,30 @@ header {
   border-bottom: 1px solid #cccccc;
   height: 75px;
 }
+
+.label1 {
+  position: relative;
+  bottom: 60px;
+  background-color: darkslategray;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  width: auto;
+  border-radius: 25px;
+}
+
+.label2 {
+  position: relative;
+  bottom: 50px;
+  left: 100px;
+  color: darkslategray;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  width: 175px;
+}
+
 
 .nav-link {
   color: darkslategray;
@@ -64,13 +90,6 @@ header {
   margin: 0 auto;
 }
 
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
 .home-info {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   color: #777777;
@@ -80,9 +99,16 @@ img {
   text-align: center;
 }
 
-
-.padding {
-  padding: 80px 0;
+.container {
+  flex: 1 0 auto;
+  border: 1px solid darkslategray;
+  width: 960px;
+  margin-top: 25px;
+  font-family: 'Nanum Gothic', sans-serif;
+  color: darkslategray;
+  background-color: snow;
+  padding: 28px;
+  border-radius: 25px;
 }
 
 hr {
@@ -96,17 +122,6 @@ h2{
 }
 
 
-.card{
-  padding: 20px;
-  border: 1px solid #dddddd;
-  background-color: #ffffff;
-  color: #777777;
-  font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-  flex: 1 0 auto;
-  width: 960px;
-  margin-top: 25px;
- 
-}
 
 #image1{
   float: left;
@@ -162,59 +177,58 @@ h4 {
   border-radius: 4px;
   box-sizing: border-box;
 }
+#linked {
+  margin: 15px;
+  color: darkslategray;
+}
 
+#git {
+  margin: 15px;
+  color: darkslategray;
+}
+
+.responsive {
+  width: 100%;
+}
 
 #ffdb{
-  background: url("../images/ffdbimage.png") no-repeat;
-  background-size: 100% 100%;
-  cursor:pointer;
-  border:none;
-  width:40%;
-  height:250px;
-  margin: 10px;
-  font-size: 20px;
-  float: left;
-  color: white;
+  height: 250px;
+    border: 1px solid darkslategray;
+    border-radius: 25px;
 }
   
 
 #pg{
-  background: url("../images/pgimage.png") no-repeat;
-  background-size: 100% 100%;
-  cursor:pointer;
-  border:none;
-  width:40%;
-  height:250px;
-  margin: 10px;
-  font-size: 20px;
-  color: white;
+  height: 250px;
+  border: 1px solid darkslategray;
+  border-radius: 25px;
 }
 
 
 #weather{
-  background: url("../images/boardgame.jpg") no-repeat;
-  background-size: 100% 100%;
-  cursor:pointer;
-  border:none;
-  width:40%;
-  height:250px;
-  margin: 10px;
-  font-size: 20px;
-  color: white;
+  height: 250px;
+  border: 1px solid darkslategray;
+  border-radius: 25px;
 }
 
 #planner{
-  background: url("../images/mp.png") no-repeat;
-  background-size: 100% 100%;
-  cursor:pointer;
-  border:none;
-  width:40%;
-  height:250px;
-  margin: 10px;
-  font-size: 20px;
-  color: white;
+  height: 250px;
+    border: 1px solid darkslategray;
+    border-radius: 25px;
 }
 
+#burger{
+  height: 250px;
+    border: 1px solid darkslategray;
+    border-radius: 25px;
+}
+
+
+#quiz{
+  height: 250px;
+    border: 1px solid darkslategray;
+    border-radius: 25px;
+}
 
 @media (max-width: 980px) {
   .landing-text h1 {
