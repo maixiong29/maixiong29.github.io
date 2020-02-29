@@ -2,23 +2,23 @@
     {
         "id":"0",
         "name": "FFDB",
-        "github": "https://github.com/JacobRosenbaum/FantasyFootball",
-        "deployed": "ffdb/index.html",
+        "github": "https://github.com/JacobRosenbaum/FantasyFootball.github.io",
+        "deployed": "https://jacobrosenbaum.github.io/FantasyFootball/",
         "image": "/portfolio/image/ffdbimage.png"
     },
     {
         "id":"1",
         "name": "Password Generator",
-        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/homework3",
-        "deployed": "passwordGenerator/index.html",
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/3_password_generator",
+        "deployed": "https://maixiong29.github.io/3_password_generator/",
         "image": "/portfolio/image/pgimage.jpg"
     },
     {
         "id":"2",
         "name": "Weather",
-        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/homework6",
-        "deployed": "weather/index.html",
-        "image": "/portfolio/image/boardgame.jpg"
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/6_weather_app",
+        "deployed": "https://maixiong29.github.io/6_weather_app/",
+        "image": "/portfolio/image/weatherscreenshot.png"
     },
     {
         "id":"3",
@@ -26,5 +26,19 @@
         "github": "https://github.com/haylee430/module_planner",
         "deployed": "https://moduleplanner2020.herokuapp.com/",
         "image": "/portfolio/image/mp.png"
+    },
+    {
+        "id":"4",
+        "name": "Eat Da Burger",
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/13_eat_da_burger",
+        "deployed": "https://hw13eatdaburgerapp.herokuapp.com/",
+        "image": "/portfolio/image/burgerapp.png"
+    },
+    {
+        "id":"5",
+        "name": "Avengers Quiz",
+        "github": "https://github.com/maixiong29/maixiong29.github.io/tree/master/4_code_quiz",
+        "deployed": "https://maixiong29.github.io/4_code_quiz/",
+        "image": "/portfolio/image/avengers.png"
     }
 ]
