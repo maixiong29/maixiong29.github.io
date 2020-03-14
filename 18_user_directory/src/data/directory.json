@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+        "first": "Serenity",
+        "last": "Zoolander",
+        "position": "Computer Scientist",
+        "email": "Serenity.Zoolander@email.com",
+        "cell": "(612) 222-9999"
+	},
+	{
+		"id": 2,
+        "first": "Ash",
+        "last": "Pent",
+        "position": "Web Designer",
+        "email": "Ash.Pent@email.com",
+        "cell": "(763) 888-0547"
+	},
+    {
+		"id": 3,
+        "first": "Rosie",
+        "last": "Sunset",
+        "position": "Software Developer",
+        "email": "Rosie.Sunset@email.com",
+        "cell": "(651) 413-1233"
+	},
+	{
+		"id": 4,
+        "first": "Witney",
+        "last": "Wiseman",
+        "position": "UX Designer & UI Developer",
+        "email": "Witney.Wiseman@email.com",
+        "cell": "(612) 958-1789"
+	},
+    {
+		"id": 5,
+        "first": "Theresa",
+        "last": "Gearn",
+        "position": "Operations Manager",
+        "email": "Theresa.Gearnt@email.com",
+        "cell": "(952) 556-4247"
+	},
+    {
+		"id": 6,
+        "first": "Kaya",
+        "last": "Finch",
+        "position": "SQL Developer",
+        "email": "Kaya.Finch@email.com",
+        "cell": "(763) 358-6785"
+	},
+    {
+		"id": 7,
+        "first": "Louis",
+        "last": "Love",
+        "position": "Software Engineer",
+        "email": "Louis.Love@email.com",
+        "cell": "(612) 244-0643"
+	},
+    {
+		"id": 8,
+        "first": "Rose",
+        "last": "Flowers",
+        "position": "Network Administrator",
+        "email": "Rose.Flowers@email.com",
+        "cell": "(763) 476-6304"
+	},
+    {
+		"id": 9,
+        "first": "Mack",
+        "last": "Miller",
+        "position": "Information Security Analyst",
+        "email": "Mack.Miller@email.com",
+        "cell": "(612) 789-4567"
+	},
+    {
+		"id": 10,
+        "first": "Trey",
+        "last": "Songz",
+        "position": "Chief Information Officer (CIO)",
+        "email": "Trey.Songs@email.com",
+        "cell": "(763) 000-4447"
+	}
+]

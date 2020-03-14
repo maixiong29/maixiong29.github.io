@@ -11,8 +11,8 @@ var questions = [
     },
     {
         title: "Who is Gamora's sister?",
-        choices: ["Natalie","Mantis","Nebula","Jane"],
-        answer: "Natalie"
+        choices: ["Natasha","Mantis","Nebula","Jane"],
+        answer: "Nebula"
     },
     {
         title: "Name the actor that plays Thanos?",
