@@ -10,7 +10,7 @@ The information that are displayed are the following:  first name, last name, po
 
 
 # Repo Details 
-https://github.com/ka-vang/ka-vang.github.io/tree/master/18_user_directory
+https://github.com/maixiong29/maixiong29.github.io/tree/master/18_user_directory
 
 # Server Deployed
 http://fair-show.surge.sh/
